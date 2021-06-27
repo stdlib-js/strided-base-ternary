@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/strided-base-ternary",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Apply a ternary callback to strided input array elements and assign results to elements in a strided output array.",
   "license": "Apache-2.0",
   "author": {
