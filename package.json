@@ -42,9 +42,9 @@
   },
   "devDependencies": {
     "@stdlib/array-filled": "^0.0.x",
+    "@stdlib/array-filled-by": "^0.0.x",
     "@stdlib/array-float64": "^0.0.x",
     "@stdlib/bench": "^0.0.x",
-    "@stdlib/blas-ext-base-gfill-by": "^0.0.x",
     "@stdlib/math-base-assert-is-nan": "^0.0.x",
     "@stdlib/math-base-special-floor": "^0.0.x",
     "@stdlib/math-base-special-pow": "^0.0.x",
