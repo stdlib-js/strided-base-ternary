@@ -79,7 +79,6 @@ The `shape` and `strides` parameters determine which elements in the strided inp
 
 ```javascript
 var Float64Array = require( '@stdlib/array-float64' );
-var floor = require( '@stdlib/math-base-special-floor' );
 
 function add( x, y, z ) {
     return x + y + z;
@@ -90,17 +89,14 @@ var y = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0 ] );
 var z = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0 ] );
 var w = new Float64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0 ] );
 
-var N = floor( x.length / 2 );
-
-ternary( [ x, y, z, w ], [ N ], [ 2, 2, 2, -1 ], add );
-// w => <Float64Array>[ 15.0, 9.0, 3.0, 0.0, 0.0, 0.0 ]
+ternary( [ x, y, z, w ], [ 3 ], [ 2, 2, 2, -1 ], add );
+// w => <Float64Array>[ 15.0, 9.0, 3.0, 0.0, 0.0 ]
 ```
 
 Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][mdn-typed-array] views.
 
 ```javascript
 var Float64Array = require( '@stdlib/array-float64' );
-var floor = require( '@stdlib/math-base-special-floor' );
 
 function add( x, y, z ) {
     return x + y + z;
@@ -118,9 +114,7 @@ var y1 = new Float64Array( y0.buffer, y0.BYTES_PER_ELEMENT*1 ); // start at 2nd 
 var z1 = new Float64Array( z0.buffer, z0.BYTES_PER_ELEMENT*1 ); // start at 2nd element
 var w1 = new Float64Array( w0.buffer, w0.BYTES_PER_ELEMENT*3 ); // start at 4th element
 
-var N = floor( x0.length / 2 );
-
-ternary( [ x1, y1, z1, w1 ], [ N ], [ -2, -2, -2, 1 ], add );
+ternary( [ x1, y1, z1, w1 ], [ 3 ], [ -2, -2, -2, 1 ], add );
 // w0 => <Float64Array>[ 0.0, 0.0, 0.0, 18.0, 12.0, 6.0 ]
 ```
 
@@ -156,7 +150,6 @@ While [`typed array`][mdn-typed-array] views mandate a view offset based on the 
 
 ```javascript
 var Float64Array = require( '@stdlib/array-float64' );
-var floor = require( '@stdlib/math-base-special-floor' );
 
 function add( x, y, z ) {
     return x + y + z;
@@ -167,9 +160,7 @@ var y = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
 var z = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
 var w = new Float64Array( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
 
-var N = floor( x.length / 2 );
-
-ternary.ndarray( [ x, y, z, w ], [ N ], [ 2, 2, 2, -1 ], [ 1, 1, 1, w.length-1 ], add );
+ternary.ndarray( [ x, y, z, w ], [ 3 ], [ 2, 2, 2, -1 ], [ 1, 1, 1, w.length-1 ], add );
 // w => <Float64Array>[ 0.0, 0.0, 0.0, 18.0, 12.0, 6.0 ]
 ```
 
