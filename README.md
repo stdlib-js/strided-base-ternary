@@ -48,13 +48,18 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import ternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/strided-base-ternary/tags). For example,
+
+```javascript
 import ternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@v0.1.1-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@v0.1.1-esm/index.mjs';
+import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@esm/index.mjs';
 ```
 
 #### ternary( arrays, shape, strides, fcn )
@@ -198,7 +203,7 @@ ternary.ndarray( [ x, y, z, w ], [ 3 ], [ 2, 2, 2, -1 ], [ 1, 1, 1, w.length-1 ]
 var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
 import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@esm/index.mjs';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
-import ternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@v0.1.1-esm/index.mjs';
+import ternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@esm/index.mjs';
 
 function add( x, y, z ) {
     return x + y + z;
