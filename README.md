@@ -48,13 +48,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import ternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@deno/mod.js';
+import ternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@v0.1.1-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@deno/mod.js';
+import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@v0.1.1-deno/mod.js';
 ```
 
 #### ternary( arrays, shape, strides, fcn )
@@ -193,7 +193,7 @@ ternary.ndarray( [ x, y, z, w ], [ 3 ], [ 2, 2, 2, -1 ], [ 1, 1, 1, w.length-1 ]
 var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
 import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@deno/mod.js';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
-import ternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@deno/mod.js';
+import ternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@v0.1.1-deno/mod.js';
 
 function add( x, y, z ) {
     return x + y + z;
