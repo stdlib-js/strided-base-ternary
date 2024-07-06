@@ -1,7 +1,7 @@
-"use strict";var m=function(r,i){return function(){return i||r((i={exports:{}}).exports,i),i.exports}};var R=m(function(D,O){
-function j(r,i,a,l){var y,x,t,w,z,e,n,u,f,o,p,q,v,c;if(v=i[0],!(v<=0))for(y=a[0],x=a[1],t=a[2],w=a[3],y<0?z=(1-v)*y:z=0,x<0?e=(1-v)*x:e=0,t<0?n=(1-v)*t:n=0,w<0?u=(1-v)*w:u=0,f=r[0],o=r[1],p=r[2],q=r[3],c=0;c<v;c++)q[u]=l(f[z],o[e],p[n]),z+=y,e+=x,n+=t,u+=w}O.exports=j
-});var g=m(function(E,b){
-function k(r,i,a,l,y){var x,t,w,z,e,n,u,f,o,p,q,v,c,N;if(c=i[0],!(c<=0))for(e=l[0],n=l[1],u=l[2],f=l[3],x=a[0],t=a[1],w=a[2],z=a[3],o=r[0],p=r[1],q=r[2],v=r[3],N=0;N<c;N++)v[f]=y(o[e],p[n],q[u]),e+=x,n+=t,u+=w,f+=z}b.exports=k
-});var A=require('@stdlib/utils-define-nonenumerable-read-only-property/dist'),h=R(),B=g();A(h,"ndarray",B);module.exports=h;
+"use strict";var R=function(v,a){return function(){return a||v((a={exports:{}}).exports,a),a.exports}};var w=R(function(G,b){
+function A(v,a,r,n,u){var e,z,f,p,t,x,y,c,N,l,m,O,o,q;if(o=a[0],!(o<=0))for(t=n[0],x=n[1],y=n[2],c=n[3],e=r[0],z=r[1],f=r[2],p=r[3],N=v[0],l=v[1],m=v[2],O=v[3],q=0;q<o;q++)O[c]=u(N[t],l[x],m[y]),t+=e,x+=z,y+=f,c+=p}b.exports=A
+});var j=R(function(H,g){
+var i=require('@stdlib/strided-base-stride2offset/dist'),B=w();function C(v,a,r,n){var u,e;return e=a[0],u=[i(e,r[0]),i(e,r[1]),i(e,r[2]),i(e,r[3])],B(v,a,r,u,n)}g.exports=C
+});var D=require('@stdlib/utils-define-nonenumerable-read-only-property/dist'),k=j(),E=w();D(k,"ndarray",E);module.exports=k;
 /** @license Apache-2.0 */
 //# sourceMappingURL=index.js.map
