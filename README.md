@@ -48,13 +48,18 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import ternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/strided-base-ternary/tags). For example,
+
+```javascript
 import ternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@v0.2.2-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@v0.2.2-deno/mod.js';
+import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@deno/mod.js';
 ```
 
 #### ternary( arrays, shape, strides, fcn )
@@ -179,7 +184,7 @@ var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-bas
 import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@deno/mod.js';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
 import add from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-add3@deno/mod.js';
-import ternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@v0.2.2-deno/mod.js';
+import ternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@deno/mod.js';
 
 var N = 10;
 
