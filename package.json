@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/strided-base-ternary",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Apply a ternary callback to strided input array elements and assign results to elements in a strided output array.",
   "license": "Apache-2.0",
   "author": {
@@ -37,9 +37,9 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/strided-base-stride2offset": "github:stdlib-js/strided-base-stride2offset#main",
+    "@stdlib/strided-base-stride2offset": "^0.1.0",
     "@stdlib/types": "^0.3.2",
-    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.1"
+    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.2"
   },
   "devDependencies": {
     "@stdlib/array-filled": "^0.2.1",
