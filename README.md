@@ -41,38 +41,32 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/strided-base-ternary
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-ternary = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var ternary = require( 'path/to/vendor/umd/strided-base-ternary/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.ternary;
-})();
-</script>
+var ternary = require( '@stdlib/strided-base-ternary' );
 ```
 
 #### ternary( arrays, shape, strides, fcn )
@@ -192,13 +186,8 @@ ternary.ndarray( [ x, y, z, w ], [ 3 ], [ 2, 2, 2, -1 ], [ 1, 1, 1, w.length-1 ]
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {.factory;
+```javascript
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
 var filledarray = require( '@stdlib/array-filled' );
 var filledarrayBy = require( '@stdlib/array-filled-by' );
 var add = require( '@stdlib/number-float64-base-add3' );
@@ -224,11 +213,6 @@ var offsets = [ 0, 0, 0, N-1 ];
 
 ternary.ndarray( [ x, y, z, w ], shape, strides, offsets, add );
 console.log( w );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -279,7 +263,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -305,8 +289,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 -->
 
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
+[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
+[chat-url]: https://stdlib.zulipchat.com
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
@@ -329,15 +313,15 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/strided/base/binary]: https://github.com/stdlib-js/strided-base-binary/tree/umd
+[@stdlib/strided/base/binary]: https://github.com/stdlib-js/strided-base-binary
 
-[@stdlib/strided/base/nullary]: https://github.com/stdlib-js/strided-base-nullary/tree/umd
+[@stdlib/strided/base/nullary]: https://github.com/stdlib-js/strided-base-nullary
 
-[@stdlib/strided/base/quaternary]: https://github.com/stdlib-js/strided-base-quaternary/tree/umd
+[@stdlib/strided/base/quaternary]: https://github.com/stdlib-js/strided-base-quaternary
 
-[@stdlib/strided/base/quinary]: https://github.com/stdlib-js/strided-base-quinary/tree/umd
+[@stdlib/strided/base/quinary]: https://github.com/stdlib-js/strided-base-quinary
 
-[@stdlib/strided/base/unary]: https://github.com/stdlib-js/strided-base-unary/tree/umd
+[@stdlib/strided/base/unary]: https://github.com/stdlib-js/strided-base-unary
 
 <!-- </related-links> -->
 
