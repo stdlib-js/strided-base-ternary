@@ -41,20 +41,32 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/strided-base-ternary
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import ternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@esm/index.mjs';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@esm/index.mjs';
+var ternary = require( '@stdlib/strided-base-ternary' );
 ```
 
 #### ternary( arrays, shape, strides, fcn )
@@ -62,8 +74,8 @@ import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-tern
 Applies a ternary callback to strided input array elements and assigns results to elements in a strided output array.
 
 ```javascript
-import add from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-add3@esm/index.mjs';
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var add = require( '@stdlib/number-float64-base-add3' );
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0 ] );
 var y = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0 ] );
@@ -84,8 +96,8 @@ The function accepts the following arguments:
 The `shape` and `strides` parameters determine which elements in the strided input and output arrays are accessed at runtime. For example, to index every other value in the strided input arrays and to index the first `N` elements of the strided output array in reverse order,
 
 ```javascript
-import add from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-add3@esm/index.mjs';
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var add = require( '@stdlib/number-float64-base-add3' );
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0 ] );
 var y = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0 ] );
@@ -99,8 +111,8 @@ ternary( [ x, y, z, w ], [ 3 ], [ 2, 2, 2, -1 ], add );
 Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][mdn-typed-array] views.
 
 ```javascript
-import add from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-add3@esm/index.mjs';
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var add = require( '@stdlib/number-float64-base-add3' );
+var Float64Array = require( '@stdlib/array-float64' );
 
 // Initial arrays...
 var x0 = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
@@ -125,8 +137,8 @@ Applies a ternary callback to strided input array elements and assigns results t
 <!-- eslint-disable max-len -->
 
 ```javascript
-import add from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-add3@esm/index.mjs';
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var add = require( '@stdlib/number-float64-base-add3' );
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0 ] );
 var y = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0 ] );
@@ -146,8 +158,8 @@ While [`typed array`][mdn-typed-array] views mandate a view offset based on the 
 <!-- eslint-disable max-len -->
 
 ```javascript
-import add from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-add3@esm/index.mjs';
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var add = require( '@stdlib/number-float64-base-add3' );
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
 var y = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
@@ -174,17 +186,12 @@ ternary.ndarray( [ x, y, z, w ], [ 3 ], [ 2, 2, 2, -1 ], [ 1, 1, 1, w.length-1 ]
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
-import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@esm/index.mjs';
-import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
-import add from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-add3@esm/index.mjs';
-import ternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-ternary@esm/index.mjs';
+```javascript
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
+var filledarray = require( '@stdlib/array-filled' );
+var filledarrayBy = require( '@stdlib/array-filled-by' );
+var add = require( '@stdlib/number-float64-base-add3' );
+var ternary = require( '@stdlib/strided-base-ternary' );
 
 var N = 10;
 
@@ -206,10 +213,6 @@ var offsets = [ 0, 0, 0, N-1 ];
 
 ternary.ndarray( [ x, y, z, w ], shape, strides, offsets, add );
 console.log( w );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -243,7 +246,7 @@ console.log( w );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -260,7 +263,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -286,8 +289,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 -->
 
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
+[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
+[chat-url]: https://stdlib.zulipchat.com
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
@@ -310,15 +313,15 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/strided/base/binary]: https://github.com/stdlib-js/strided-base-binary/tree/esm
+[@stdlib/strided/base/binary]: https://github.com/stdlib-js/strided-base-binary
 
-[@stdlib/strided/base/nullary]: https://github.com/stdlib-js/strided-base-nullary/tree/esm
+[@stdlib/strided/base/nullary]: https://github.com/stdlib-js/strided-base-nullary
 
-[@stdlib/strided/base/quaternary]: https://github.com/stdlib-js/strided-base-quaternary/tree/esm
+[@stdlib/strided/base/quaternary]: https://github.com/stdlib-js/strided-base-quaternary
 
-[@stdlib/strided/base/quinary]: https://github.com/stdlib-js/strided-base-quinary/tree/esm
+[@stdlib/strided/base/quinary]: https://github.com/stdlib-js/strided-base-quinary
 
-[@stdlib/strided/base/unary]: https://github.com/stdlib-js/strided-base-unary/tree/esm
+[@stdlib/strided/base/unary]: https://github.com/stdlib-js/strided-base-unary
 
 <!-- </related-links> -->
 
